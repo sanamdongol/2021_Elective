@@ -33,6 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/et_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -42,6 +43,7 @@
 
 
     <EditText
+        android:id="@+id/et_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -50,19 +52,23 @@
         android:textColorHint="@android:color/white" />
 
     <Button
+        android:id="@+id/btn_login"
         android:layout_width="250dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:backgroundTint="@android:color/white"
+        android:onClick="onLogin"
         android:text="Login"
         android:textColor="@android:color/black" />
 
     <TextView
+        android:id="@+id/tv_forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
+        android:onClick="onLogin"
         android:text="Forgot Password ?"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
