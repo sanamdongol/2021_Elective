@@ -3,12 +3,16 @@ package com.test.learncode;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -50,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });
 
 
-                https://developer.android.com/guide/topics/ui/dialogs
+                https:
+//developer.android.com/guide/topics/ui/dialogs
                 alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -63,19 +68,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        //   Button loginBtn = findViewById(R.id.btn_login);
+    }
 
-       /* loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,
-                        "Button Clicked",
-                        Toast.LENGTH_SHORT).show();
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
-                Log.e("button clicked", "byutton clicked");
-            }
-        });*/
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int menuId = item.getItemId();
+        switch (menuId) {
+            case R.id.action_edit:
+                Toast.makeText(this, "Menu Item", Toast.LENGTH_SHORT).show();
+                break;
+                
+            case R.id.action:
+                // TODO: 3/15/21 do you self 
+                break;
+            case R.id.edit:
+                // TODO: 3/15/21 write some good method 
+                break;
 
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
